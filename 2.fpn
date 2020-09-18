@@ -1,0 +1,97 @@
+$$ *********************************************
+$$      Neutral File Created from midas GTS NX   
+$$ *********************************************
+
+$$ Version information.
+VER, 2.0.0
+
+$$ Project Setting Data. 
+PROJ   , , 1, 0,          9.80665,          9.80665,               0.,               1., 
+$$ Unit system. 
+UNIT, KN,M,SEC
+
+$$ Coordinate data. 
+CRECT  , 1, Global Rectangular, 0,               0.,               0.,               0., , 
+       ,               1.,               0.,               0.,               0.,               1.,               0., , 
+CCYLN  , 2, Global Cylindrical, 0,               0.,               0.,               0., , 
+       ,               1.,               0.,               0.,               0.,               1.,               0., , 
+
+$$      Node
+NODE   , 1, 0.0, 0.0, 0.0, 1, , , 
+NODE   , 2, 0.0,               1., 0.0, 1, , , 
+NODE   , 3,               1., 0.0, 0.0, 1, , , 
+NODE   , 4,               1.,               1., 0.0, 1, , , 
+NODE   , 5, 0.0,               2., 0.0, 1, , , 
+NODE   , 6,               1.,               2., 0.0, 1, , , 
+NODE   , 7,               2.,               2., 0.0, 1, , , 
+NODE   , 8,               2.,               1., 0.0, 1, , , 
+NODE   , 9,               2., 0.0, 0.0, 1, , , 
+
+$$      Element
+TRIA   , 1, 1, 1, 4, 2, , , 
+TRIA   , 2, 1, 4, 1, 3, , , 
+TRIA   , 3, 1, 5, 4, 6, , , 
+TRIA   , 4, 1, 4, 5, 2, , , 
+TRIA   , 5, 1, 6, 8, 7, , , 
+TRIA   , 6, 1, 8, 6, 4, , , 
+TRIA   , 7, 1, 8, 3, 9, , , 
+TRIA   , 8, 1, 3, 8, 4, , , 
+
+$$      Material
+$$ Name of Material 1 : Isotropic
+MISO   , 1, Isotropic, 0, 0, 1, 1, , 
+MATGEN , 1,           50000.,               0.,               0.,              0.3,              20.,           1e-006,             0.05
+       , 0,               1., , , ,               1., , 0
+       , , , , , , , , 
+MATPORO, 1,              21.,              0.5, 0, , , , 
+       ,           1e-005,           1e-005,           1e-005, 0, ,  5.23021333e-006, , 
+
+$$
+$$      Property Data
+$$
+PPSTRN , 1, 2D Property, 1, 0, 1, , , 
+$$ Geometry.
+$$      Boundary
+BSET   , 1, Boundary Set-1, , , , , , 
+CONST  , 1, 2, 100000, , , , , 
+CONST  , 1, 5, 100000, , , , , 
+CONST  , 1, 8, 100000, , , , , 
+CONST  , 1, 7, 100000, , , , , 
+CONST  , 1, 3, 110000, , , , , 
+CONST  , 1, 1, 110000, , , , , 
+CONST  , 1, 9, 110000, , , , , 
+
+$$      MeshSet
+MSET   , 1, Default Mesh Set, , , , , , 
+MSETE  , 1, 0, , , , , , 
+MSETN  , 1, 0, , , , , , 
+MSET   , 26, Auto-Mesh (Planar Area), , , , , , 
+MSETE  , 26, 2, , , , , , 
+       , 1, 2, , , , , , 
+MSETN  , 26, 4, , , , , , 
+       , 3, 1, 2, 4, , , , 
+MSET   , 27, Auto-Mesh (Planar Area)-1, , , , , , 
+MSETE  , 27, 2, , , , , , 
+       , 3, 4, , , , , , 
+MSETN  , 27, 4, , , , , , 
+       , 2, 4, 5, 6, , , , 
+MSET   , 28, Auto-Mesh (Planar Area)-2, , , , , , 
+MSETE  , 28, 2, , , , , , 
+       , 5, 6, , , , , , 
+MSETN  , 28, 4, , , , , , 
+       , 4, 8, 6, 7, , , , 
+MSET   , 29, Auto-Mesh (Planar Area)-3, , , , , , 
+MSETE  , 29, 2, , , , , , 
+       , 7, 8, , , , , , 
+MSETN  , 29, 4, , , , , , 
+       , 3, 4, 8, 9, , , , 
+
+$$
+$$      Stage Data
+$$
+
+$$
+$$      Analysis Data
+$$
+
+ENDDATA
